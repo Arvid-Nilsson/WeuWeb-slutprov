@@ -18,7 +18,7 @@
     justify-content: space-evenly;
 }
 
-p{
+#option-item{
     width: 6vw;
     height: 4vw;
     background-color: aqua;
@@ -28,4 +28,9 @@ p{
     align-items: center;
 
     border-radius: 0.4vw;
+}
+
+#option-text{
+    text-align: center;
+    font-size: 1.5vw;
 }
