@@ -4,6 +4,7 @@ img{
 }
 
 #options-align-center{
+    /* Positionerar menyn i horizontalt centrerad i bodyn mha flexbox */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -13,12 +14,16 @@ img{
     width: 40vw;
     height: 25vw;
     background-color: beige;
+    
+    /* positionerar raderna av knappar jämt i menyn */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
 #option-row{
+
+    /* Sprider ut knapparna längst med raden */
     display: flex;
     justify-content: space-evenly;
 }
@@ -28,11 +33,15 @@ img{
     height: 4vw;
     background-color: aqua;
 
+    /* Positionerar texten inuti knappen till mitten av knappen */
     display: flex;
     justify-content: center;
     align-items: center;
 
+    /* Tar bort boardern från knappen */
     border: transparent;
+
+    /* Rundar hörnen av knappen */
     border-radius: 0.4vw;
 }
 
