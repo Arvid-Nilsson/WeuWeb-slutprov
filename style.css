@@ -1,3 +1,11 @@
+body{
+    background-color: white;
+}
+
+#motivation, #tid{
+    display: none;
+}
+
 img{
     width: 30vw;
     max-width: 150px;

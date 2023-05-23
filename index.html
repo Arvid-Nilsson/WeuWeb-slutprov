@@ -12,9 +12,9 @@
 
     <script src="index.js"></script>
 
-    <div>
+    <div id="header">
 
-        <h1>Be the best version of yourself!</h1>
+        <h1 id="motivation">Be the best version of yourself!</h1>
 
         <p id="tid">Time chould not be found</p>
 
@@ -35,7 +35,7 @@
             <!-- Rad 1 -->
             <div id="option-row">
 
-                <button id="option-item">
+                <button id="option-item" onclick="togleBgColour()">
                     <p id="option-text">Change<br>Bg</p>
                 </button>
                 
@@ -44,7 +44,7 @@
                     <p id="option-text">Change<br>picture</p>
                 </button>
                 
-                <button id="option-item">
+                <button id="option-item" onclick="centerHeader()">
                     <p id="option-text">Header</p>
                 </button>
                 
@@ -53,15 +53,15 @@
             <!-- Rad 2 -->
             <div id="option-row">
                 
-                <button id="option-item">
+                <button id="option-item" onclick="togleDisplay('motivation')">
                     <p id="option-text">Good<br>vibes</p>
                 </button>
 
-                <button id="option-item">
+                <button id="option-item" onclick="hideElementById('bild')">
                     <p id="option-text">Hide<br>picture</p>
                 </button>
 
-                <button id="option-item">
+                <button id="option-item" onclick="hideElementById('header')">
                     <p id="option-text">Remove<br>Header</p>
                 </button>
                 
@@ -70,15 +70,15 @@
 
             <!-- Rad 3 -->
             <div id="option-row">
-                <button id="option-item">
+                <button id="option-item" onclick="togleDisplay('tid')">
                     <p id="option-text">Time</p>
                 </button>
 
-                <button id="option-item">
+                <button id="option-item" onclick="showElementById('bild')">
                     <p id="option-text">Show<br>picture</p>
                 </button>
 
-                <button id="option-item">
+                <button id="option-item" onclick="showElementById('header')">
                     <p id="option-text">Show<br>header</p>
                 </button>
             </div>
