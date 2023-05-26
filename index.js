@@ -57,7 +57,11 @@ function togleBgColour(){
 
 function centerHeader(){
     let header = document.getElementById("header");
-    let img = document.getElementById("imgAlign");
+
+    //div around img that can center img by changing justify content to center
+    let imgAlign = document.getElementById("imgAlign");
+    
+    let img = document.getElementById("bild");
 
     if(headerCentered == false){
         header.style.backgroundColor = "gray";
@@ -66,7 +70,9 @@ function centerHeader(){
         header.style.textAlign = "center";
 
         //center img
-        img.style.justifyContent = "center"
+        imgAlign.style.justifyContent = "center"
+
+        img.style.border = "10px solid green"
 
         headerCentered = true;
     }
@@ -77,7 +83,9 @@ function centerHeader(){
         header.style.textAlign = "left";
 
         //move  img left
-        img.style.justifyContent = "flex-start"
+        imgAlign.style.justifyContent = "flex-start"
+
+        img.style.border = "transparent"
 
         headerCentered = false;
     }
