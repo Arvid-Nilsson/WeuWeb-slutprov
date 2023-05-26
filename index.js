@@ -1,12 +1,16 @@
-function toglePicture(){
-    let x = document.getElementById("bild");
+let headerCentered = false;
 
-    if(x.src.endsWith("img/Face4.png")){
-        x.src = "img/Face6.png";
+function toglePicture(){
+    let img = document.getElementById("bild");
+
+    //changing dice picture to 6 if it is 4
+    if(img.src.endsWith("img/Face4.png")){
+        img.src = "img/Face6.png";
     }
 
+    //changing dice picture to 4 if it is 6
     else{
-        x.src = "img/Face4.png";
+        img.src = "img/Face4.png";
     }
 }
 
@@ -17,16 +21,16 @@ function getTime(){
 
 function togleDisplay(id){
 
-    let x = document.getElementById(id)
+    let element = document.getElementById(id)
 
     //hiding html if its shown
-    if(x.style.display == "block"){
-        x.style.display = "none"
+    if(element.style.display == "block"){
+        element.style.display = "none"
     } 
 
     //Showbing html if it is hidden
     else{
-        x.style.display = "block"
+        element.style.display = "block"
     }
 }
 
@@ -39,27 +43,43 @@ function showElementById(id){
 }
 
 function togleBgColour(){
-    let x = document.body;
+    let body = document.body;
 
     //changing colour of the background to aqua if the background colour is white or blank as it is by default 
-    if(x.style.backgroundColor == "white" || x.style.backgroundColor == "")
-        x.style.backgroundColor = "aqua";
+    if(body.style.backgroundColor == "white" || body.style.backgroundColor == "")
+        body.style.backgroundColor = "aqua";
 
     //changng the background colour to white if it is aqua
     else{
-        x.style.backgroundColor = "white";
+        body.style.backgroundColor = "white";
     }
 }
 
 function centerHeader(){
-    let x = document.getElementById("header");
+    let header = document.getElementById("header");
+    let img = document.getElementById("imgAlign");
 
-    if(x.style.textAlign == "left" || x.style.textAlign == ""){
-        x.style.textAlign = "center";
-        x.style.backgroundColor = "gray";
+    if(headerCentered == false){
+        header.style.backgroundColor = "gray";
+
+        //center text
+        header.style.textAlign = "center";
+
+        //center img
+        img.style.justifyContent = "center"
+
+        headerCentered = true;
     }
     else{
-        x.style.textAlign = "left";
+        header.style.backgroundColor = "white";
+
+        //move text left
+        header.style.textAlign = "left";
+
+        //move  img left
+        img.style.justifyContent = "flex-start"
+
+        headerCentered = false;
     }
         
 }
